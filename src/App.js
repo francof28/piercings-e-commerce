@@ -1,12 +1,13 @@
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Piercing E-Commerce</h1>
-        <p>Primer proyecto en React.js para el curso de CoderHouse.</p>
-      </header>
+        <NavBar />
+        <body>
+          <h2>Pierciengs MF</h2>
+        </body>
     </div>
   );
 }
