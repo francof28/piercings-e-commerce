@@ -1,7 +1,8 @@
-h3 {
+h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
     border: solid;
     border-color: #e9c46a;
     text-decoration: underline;
+    color: #e9c46a;
+    background-color: black;
 }

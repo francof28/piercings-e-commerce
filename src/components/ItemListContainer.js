@@ -8,7 +8,7 @@ class ItemListContainer extends React.Component {
 
     render() {
         return (
-            <h3>{this.props.mensaje}</h3>
+            <h1>{this.props.mensaje}</h1>
         )
     }
 }

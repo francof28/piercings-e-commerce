@@ -1,6 +1,5 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
 import './NavBar.css';
 
 class NavBar extends React.Component {
@@ -18,7 +17,6 @@ class NavBar extends React.Component {
                     <li><a href="#">Cartilago</a></li>
                     <li><a href="#">Boca</a></li>
                     <li><a href="#">Mas categorias</a></li>
-                    <ItemListContainer mensaje={`Mensaje enviado desde la NavBar!`}/>
                 </ul>
             </div>
         )
