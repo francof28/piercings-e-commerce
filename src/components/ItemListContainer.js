@@ -1,16 +1,18 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 import './ItemListContainer.css';
 
-class ItemListContainer extends React.Component {
-    constructor(props){
-        super(props)
+const ItemListContainer = (props) => {
+    const onAdd = (count) => {
+        alert(count);
     }
-
-    render() {
-        return (
-            <h1>{this.props.mensaje}</h1>
+    
+    return (
+        <div>
+            <h1>{props.mensaje}</h1>
+            <ItemCount stock="5" initial={1} onAdd={onAdd}/>
+        </div>
         )
-    }
 }
 
 export default ItemListContainer;

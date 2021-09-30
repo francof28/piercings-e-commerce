@@ -2,8 +2,7 @@ import React from "react";
 import CartWidget from "./CartWidget";
 import './NavBar.css';
 
-class NavBar extends React.Component {
-    render () {
+const NavBar = () => {
         return (
             <div className="NavBar">
                 <header className="header">Piercings MF</header>
@@ -20,7 +19,6 @@ class NavBar extends React.Component {
                 </ul>
             </div>
         )
-    }
 }
 
 export default NavBar;
