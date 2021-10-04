@@ -7,17 +7,21 @@ const ItemCount = (props) => {
     const addItem = () => {
         if(items < props.stock) {
             setItems(items + 1)
-            props.onAdd(items)
         }
     };
 
     const restItem = () => {
         if(items > 0) {
             setItems(items - 1)
-            props.onAdd(items)
         }
     };
     
+    const randomAlert = () => {
+        if(items !== 0) {
+            props.onAdd(items)
+        }
+    }
+
     return (
         <div className="container">
             <div className="counter">
@@ -27,6 +31,7 @@ const ItemCount = (props) => {
             </div>
             <button className="addToCart">Agregar al carrito</button>
             <p className="stock">Stock disponible: {props.stock}</p>
+            <button onClick={randomAlert}>onAdd button</button>
         </div>
     )
 }

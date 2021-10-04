@@ -10,7 +10,7 @@ const ItemListContainer = (props) => {
     return (
         <div>
             <h1>{props.mensaje}</h1>
-            <ItemCount stock="5" initial={1} onAdd={onAdd}/>
+            <ItemCount stock="5" initial={0} onAdd={onAdd}/>
         </div>
         )
 }
