@@ -4,6 +4,8 @@
     align-items: center;
     background-color: rgb(209, 199, 199);
     color: black;
+    max-width: fit-content;
+    border-radius: 8px;
 }
 
 .addToCart {

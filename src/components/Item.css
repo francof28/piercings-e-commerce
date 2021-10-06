@@ -1,0 +1,11 @@
+.Item {
+    margin: 10px;
+    background-color: rgb(209, 199, 199);
+    border: solid;
+    border-radius: 9px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}

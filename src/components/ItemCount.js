@@ -29,9 +29,8 @@ const ItemCount = (props) => {
                 <p>{items}</p>
                 <button onClick={addItem}>+</button>
             </div>
-            <button className="addToCart">Agregar al carrito</button>
+            <button className="addToCart" onClick={randomAlert}>Agregar al carrito</button>
             <p className="stock">Stock disponible: {props.stock}</p>
-            <button onClick={randomAlert}>onAdd button</button>
         </div>
     )
 }
