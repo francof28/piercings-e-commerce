@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import piercings from "./piercings.json"
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import './ItemListContainer.css';
@@ -10,6 +11,18 @@ const PIERCINGS = [
 ]
 
 const ItemListContainer = (props) => {
+    const [piercingsList, setPiercingsList] = useState([]);
+    
+    useEffect(() => {
+        const task = new Promise((resolve, reject) => {
+            setTimeout(function () {resolve(piercings)}, 2000)
+        })
+        
+        task.then((response) => {
+            setPiercingsList(response);
+        })
+    }, [])
+
     const onAdd = (count) => {
         alert(count);
     }
@@ -17,7 +30,7 @@ const ItemListContainer = (props) => {
     return (
         <div>
             <h1>{props.mensaje}</h1>
-            <ItemList items={PIERCINGS}/>
+            <ItemList items={piercingsList}/>
             <ItemCount stock="5" initial={0} onAdd={onAdd}/>
         </div>
         )
