@@ -1,16 +1,31 @@
 import './App.css';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import NavBar from './components/NavBar/NavBar';
+
+
+import Home from './views/Home/Home';
+import About from './views/About/About';
+import Contact from './views/Contact/Contact';
+import ItemDetail from './views/ItemDetail/ItemDetail';
+
+
 
 function App() {
   return (
-    <div className="App">
-        <NavBar />
-        <body>
-          <h2>Pierciengs MF</h2>
-          <ItemListContainer mensaje={`Mensaje enviado desde las props!`}/>
-        </body>
-    </div>
+    <Router>
+      <div className="App">
+          <NavBar />
+          <body>
+            <Switch>
+            <Route path='/' exact component={Home} />
+					  <Route path='/about' component={About} />
+					  <Route path='/contact' component={Contact} />
+            </Switch>
+          </body>
+      </div>
+    </Router>
   );
 }
 
