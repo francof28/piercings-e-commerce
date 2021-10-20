@@ -1,8 +1,17 @@
+import ItemCount from "../../components/ItemCount/ItemCount";
 import React, { useEffect, useState } from "react";
-import piercings from "../../components/piercings.json"
+import piercings from "../../components/piercings.json";
 
 const ItemDetail = ( item ) => {
     const [piercingItem, setPiercingItem] = useState({});
+    const [count, setCount] = useState();
+    const [finalizar, setFinalizar] = useState(false);
+
+    const onAdd = (item) => {
+        setCount(item);
+        setFinalizar(!finalizar);
+     }
+     
 
     // console.log("MATCH", item)
 
@@ -16,6 +25,7 @@ const ItemDetail = ( item ) => {
         })
     }, [])
 
+   
     // console.log("ITEM", piercingItem)
 
     return (
@@ -24,6 +34,18 @@ const ItemDetail = ( item ) => {
             <p>{`$${piercingItem.price}`}</p>
             <p>{piercingItem.description}</p>
             <img src={piercingItem.pictureUrl} alt="Item" />
+            {
+                finalizar ? (
+                    <div>
+                    <p>Agregaste {count} items al carrito</p>
+                    <button>Finalizar compra</button>
+                    </div>
+                ) : (
+                    
+                    <ItemCount stock="5" initial={0} onAdd={(item) => onAdd(item)}/>
+                )
+            }
+            
         </div>
     )
 }

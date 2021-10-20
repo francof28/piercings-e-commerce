@@ -6,7 +6,6 @@ const Item = (props) => {
         <div className="Item">
             <h3>{`${props.id}. ${props.title}`}</h3>
             <p>{`$${props.price}`}</p>
-            <p>{props.description}</p>
             <img src={props.pictureUrl} alt="Item" />
         </div>
     )

@@ -16,12 +16,6 @@ const ItemCount = (props) => {
         }
     };
     
-    const randomAlert = () => {
-        if(items !== 0) {
-            props.onAdd(items)
-        }
-    }
-
     return (
         <div className="container">
             <div className="counter">
@@ -29,7 +23,7 @@ const ItemCount = (props) => {
                 <p>{items}</p>
                 <button onClick={addItem}>+</button>
             </div>
-            <button className="addToCart" onClick={randomAlert}>Agregar al carrito</button>
+            <button className="addToCart" onClick={() => props.onAdd(items)}>Agregar al carrito</button>
             <p className="stock">Stock disponible: {props.stock}</p>
         </div>
     )

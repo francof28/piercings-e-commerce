@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import piercings from "../piercings.json"
-import ItemCount from "../ItemCount/ItemCount";
+import piercings from "../piercings.json";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css';
 
@@ -23,15 +22,10 @@ const ItemListContainer = (props) => {
         })
     }, [])
 
-    const onAdd = (count) => {
-        alert(count);
-    }
-    
     return (
         <div>
             <h1>{props.mensaje}</h1>
             <ItemList items={piercingsList}/>
-            <ItemCount stock="5" initial={0} onAdd={onAdd}/>
         </div>
         )
 }
