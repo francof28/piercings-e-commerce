@@ -23,6 +23,7 @@ header {
 }
 
 ul {
+    display: grid;
     height: 88%;
     padding: 0;
     width: 100%;

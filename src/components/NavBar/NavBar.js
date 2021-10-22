@@ -8,10 +8,13 @@ const NavBar = () => {
         return (
             <div className="NavBar">
                 <header className="header">Piercings MF</header>
-                <ul>
                 <CartWidget />
+                <ul>
                 <Link className='Link' to='/'>
 					Home
+				</Link>
+                <Link className='Link' to='/categories'>
+					Categorias
 				</Link>
 				<Link className='Link' to='/about'>
 					About
