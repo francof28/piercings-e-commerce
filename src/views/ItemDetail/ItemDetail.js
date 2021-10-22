@@ -1,6 +1,7 @@
 import ItemCount from "../../components/ItemCount/ItemCount";
 import React, { useEffect, useState } from "react";
 import piercings from "../../components/piercings.json";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ( item ) => {
     const [piercingItem, setPiercingItem] = useState({});
@@ -38,7 +39,9 @@ const ItemDetail = ( item ) => {
                 finalizar ? (
                     <div>
                     <p>Agregaste {count} items al carrito</p>
-                    <button>Finalizar compra</button>
+                    <Link className='Link' to='/cart'>
+                        <button>Finalizar compra</button>
+                    </Link>
                     </div>
                 ) : (
                     

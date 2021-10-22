@@ -12,6 +12,7 @@ import ItemDetail from './views/ItemDetail/ItemDetail';
 import Categories from './views/Categories/Categories';
 import Acero from './views/Categories/Acero/Acero';
 import Oro from './views/Categories/Oro/Oro';
+import Cart from './views/Cart/Cart'
 
 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path='/categories' component={Categories} />
             <Route path='/acero' component={Acero} />
             <Route path='/oro' component={Oro} />
+            <Route path='/cart' component={Cart} />
             </Switch>
           </body>
       </div>
